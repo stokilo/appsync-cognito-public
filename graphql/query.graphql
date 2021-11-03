@@ -1,0 +1,20 @@
+query ListNotes {
+  listNotes {
+    id
+    content
+  }
+}
+
+mutation CreateNote($note: NoteInput!) {
+  createNote(note: $note) {
+    id
+    content
+  }
+}
+
+subscription OnCreateNoteSubscription($content: String) {
+  onCreateNote(content: $content) {
+    id,
+    content
+  }
+}

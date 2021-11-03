@@ -1,0 +1,44 @@
+{
+  "name": "sst-auth",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "generate": "graphql-codegen --config codegen.yml",
+    "test": "sst test",
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "postdeploy-dev": "cd frontend && yarn deploy-dev",
+    "postdeploy-prod": "cd frontend && yarn deploy-prod",
+    "deploy-dev": "sst deploy --stage dev",
+    "deploy-prod": "sst deploy --stage prod",
+    "undeploy-dev": "sst remove --stage dev",
+    "undeploy-prod": "sst remove --stage prod",
+    "remove": "sst remove"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.126.0",
+    "@aws-cdk/aws-cognito": "1.126.0",
+    "@aws-cdk/core": "1.126.0",
+    "@aws-sdk/client-ssm": "^3.37.0",
+    "@graphql-codegen/cli": "2.2.2",
+    "@graphql-codegen/typescript": "2.3.0",
+    "@graphql-codegen/typescript-document-nodes": "2.2.0",
+    "@graphql-codegen/typescript-operations": "2.2.0",
+    "@nuxtjs/eslint-config-typescript": "6.0.1",
+    "@serverless-stack/cli": "0.50.0",
+    "@serverless-stack/resources": "0.50.0",
+    "@types/aws-lambda": "^8.10.84"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.38.0",
+    "@graphql-codegen/typescript-resolvers": "^2.4.0",
+    "aws-sdk": "^2.1015.0",
+    "graphql": "^16.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
+  }
+}
