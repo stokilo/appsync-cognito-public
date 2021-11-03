@@ -42,7 +42,6 @@ export default class AppSyncStack extends sst.Stack {
         }
       },
       resolvers: {
-        // 'Query    listNotes': 'notes',
         'Query listNotes': {
           dataSource: 'tableDs',
           resolverProps: {
@@ -64,7 +63,6 @@ export default class AppSyncStack extends sst.Stack {
       }
     })
 
-    // Enable the AppSync API to access the DynamoDB table
     api.attachPermissions([notesTable])
     props.ssmOutput!.graphQlApiEndpoint = api.graphqlApi.graphqlUrl
   }
