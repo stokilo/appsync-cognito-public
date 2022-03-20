@@ -1,3 +1,4 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 #### What is it?
 
 Sandbox for testing AppSync integration with SST and Cognito. It was generated from SST examples
